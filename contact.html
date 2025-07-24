@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SethChenge | Your IT Solutions Partner</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact SethChenge for professional IT services including Windows installation, cybersecurity, AWS cloud solutions, and CISCO networking. Get expert IT support today.">
+    <meta name="keywords" content="IT services, Windows installation, cybersecurity, AWS, CISCO, network setup, computer repair, SethChenge, contact">
+    <meta name="author" content="SethChenge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact SethChenge - Your IT Solutions Partner">
+    <meta property="og:description" content="Get in touch with SethChenge for professional IT services and support">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sethchenge.com/contact">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+    
+    <!-- CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .animation-delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .contact-form-container {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Mobile Sidebar Styles */
+        .mobile-sidebar {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar-content {
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .mobile-sidebar.show {
+            transform: translateX(0);
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="sethchenge.html" class="navbar-brand flex items-center">
+                    <div class="logo-container flex items-center">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                        <span class="brand-text font-bold text-xl">
+                            <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="sethchenge.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">home</span>
+                        Home
+                    </a>
+                    <a href="services.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">build</span>
+                        Services
+                    </a>
+                    <a href="staff.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">group</span>
+                        Staff
+                    </a>
+                    <a href="contact.html" class="nav-link active flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <span class="material-icons mr-2">contact_mail</span>
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden mobile-menu-btn p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <span class="material-icons text-gray-600">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar fixed inset-0 z-50 lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex h-full">
+            <!-- Sidebar -->
+            <div class="sidebar-content w-80 bg-white shadow-2xl">
+                <div class="sidebar-header p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div class="logo-container flex items-center">
+                            <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                            <span class="brand-text font-bold text-xl">
+                                <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                            </span>
+                        </div>
+                        <button class="close-sidebar p-2 rounded-md hover:bg-gray-100 transition-colors">
+                            <span class="material-icons text-gray-600">close</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-body p-6">
+                    <nav class="space-y-4">
+                        <a href="sethchenge.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">home</span>
+                            Home
+                        </a>
+                        <a href="services.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">build</span>
+                            Services
+                        </a>
+                        <a href="staff.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">group</span>
+                            Staff
+                        </a>
+                        <a href="contact.html" class="nav-link active flex items-center p-3 rounded-lg bg-blue-50 text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">contact_mail</span>
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- Overlay -->
+            <div class="sidebar-overlay flex-1 bg-black bg-opacity-50"></div>
+        </div>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+                    Get In <span class="gradient-text">Touch</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 animate-fade-in-up animation-delay-200">
+                    Ready to transform your IT infrastructure? Let's discuss how we can help your business thrive with cutting-edge solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up animation-delay-400">
+                    <div class="flex items-center space-x-2 bg-white rounded-full px-6 py-3 shadow-lg border border-blue-100">
+                        <span class="material-icons text-blue-600">schedule</span>
+                        <span class="text-sm font-medium text-gray-700">24/7 Support</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white rounded-full px-6 py-3 shadow-lg border border-blue-100">
+                        <span class="material-icons text-blue-600">flash_on</span>
+                        <span class="text-sm font-medium text-gray-700">Quick Response</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white rounded-full px-6 py-3 shadow-lg border border-blue-100">
+                        <span class="material-icons text-blue-600">verified</span>
+                        <span class="text-sm font-medium text-gray-700">Expert Team</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white rounded-full px-6 py-3 shadow-lg border border-blue-100">
+                        <span class="material-icons text-blue-600">security</span>
+                        <span class="text-sm font-medium text-gray-700">Secure Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 contact-form-container border border-gray-100">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Send Us a Message</h2>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                       placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                       placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                   placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                   placeholder="+254 XXX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
+                            <select id="service" name="service" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                                <option value="">Select a service...</option>
+                                <option value="windows-installation">Windows Installation & Setup</option>
+                                <option value="cybersecurity">Cybersecurity Solutions</option>
+                                <option value="aws-cloud">AWS Cloud Services</option>
+                                <option value="cisco-networking">CISCO Networking</option>
+                                <option value="it-support">IT Support & Maintenance</option>
+                                <option value="troubleshooting">System Troubleshooting</option>
+                                <option value="network-setup">Network Setup & Configuration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency" class="block text-sm font-medium text-gray-700 mb-2">Urgency Level</label>
+                            <select id="urgency" name="urgency" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                                <option value="normal">Normal - Within 24 hours</option>
+                                <option value="urgent">Urgent - Within 4 hours</option>
+                                <option value="emergency">Emergency - ASAP</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-vertical"
+                                      placeholder="Tell us about your project or requirements..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full btn-primary text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
+                            <span class="material-icons">send</span>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Contact Cards -->
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl shadow-xl p-6 contact-card border border-gray-100">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-blue-600">email</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Email Address</h3>
+                                    <p class="text-gray-600">Drop us a line anytime</p>
+                                </div>
+                            </div>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chengeseth25@gmail.com&su=IT%20Services%20Inquiry&body=Hello%20SethChenge%20Team,%0A%0AI%20am%20interested%20in%20your%20IT%20services.%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you!" 
+                               target="_blank" 
+                               class="text-blue-600 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2">
+                                <span>chengeseth25@gmail.com</span>
+                                <span class="material-icons text-sm">open_in_new</span>
+                            </a>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-xl p-6 contact-card border border-gray-100">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-blue-600">phone</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Phone Number</h3>
+                                    <p class="text-gray-600">Call us for immediate support</p>
+                                </div>
+                            </div>
+                            <a href="tel:+254721156350" class="text-blue-600 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2">
+                                <span>+254 721 156 350</span>
+                                <span class="material-icons text-sm">call</span>
+                            </a>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-xl p-6 contact-card border border-gray-100">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-blue-600">location_on</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Service Area</h3>
+                                    <p class="text-gray-600">We serve you anywhere</p>
+                                </div>
+                            </div>
+                            <div class="text-gray-700">
+                                <p class="mb-2">Nairobi, Kenya</p>
+                                <p class="text-sm text-gray-600">On-site services available</p>
+                                <p class="text-sm text-gray-600">Remote support worldwide</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-xl p-6 contact-card border border-gray-100">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-blue-600">access_time</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Business Hours</h3>
+                                    <p class="text-gray-600">We're here when you need us</p>
+                                </div>
+                            </div>
+                            <div class="text-gray-700 space-y-1">
+                                <p class="text-sm">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p class="text-sm">Saturday: 9:00 AM - 4:00 PM</p>
+                                <p class="text-sm">Sunday: Emergency calls only</p>
+                                <p class="text-sm font-medium text-blue-600">24/7 Emergency Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-gray-800 mb-4">Our Service Area</h3>
+                        <div id="map" class="w-full h-64 rounded-lg bg-gray-100 border border-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4 text-gray-800">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600">Quick answers to common questions</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-medium">How quickly can you respond to support requests?</span>
+                            <span class="material-icons faq-icon text-blue-600">expand_more</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                            We provide 24/7 support with response times of under 2 hours for urgent issues, within 4 hours for normal requests, and immediate response for emergency situations.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-medium">Do you offer on-site services?</span>
+                            <span class="material-icons faq-icon text-blue-600">expand_more</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                            Yes, we provide on-site services throughout Nairobi and surrounding areas. We also offer remote support for many issues, making our services accessible worldwide.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-medium">What are your service rates?</span>
+                            <span class="material-icons faq-icon text-blue-600">expand_more</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                            Our rates vary by service complexity and urgency. We offer competitive pricing starting from $50 for basic troubleshooting, $150 for comprehensive solutions, and custom quotes for enterprise services.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-medium">Do you provide cybersecurity services?</span>
+                            <span class="material-icons faq-icon text-blue-600">expand_more</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                            Absolutely! We specialize in cybersecurity solutions including threat assessment, security audits, firewall configuration, and employee training to protect your business from cyber threats.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-medium">Can you help with cloud migration to AWS?</span>
+                            <span class="material-icons faq-icon text-blue-600">expand_more</span>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+                            Yes, we are AWS certified and can help you migrate your infrastructure to the cloud, optimize costs, and ensure secure, scalable solutions for your business needs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="w-8 h-8">
+                        <span class="text-xl font-bold">
+                            <span class="text-blue-400">Seth</span><span class="text-white">Chenge</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Your trusted partner for comprehensive IT solutions and cutting-edge technology services.
+                    </p>
+                </div>
+                <div>
+                    <h6 class="font-semibold mb-4">Quick Links</h6>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sethchenge.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="staff.html" class="text-gray-400 hover:text-white transition-colors">Staff</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-semibold mb-4">Services</h6>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">
+                            Windows Installation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">AWS Cloud</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">CISCO Networking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-semibold mb-4">Contact Info</h6>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <span class="material-icons text-blue-400 text-sm">email</span>
+                            <span class="text-gray-400">chengeseth25@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="material-icons text-blue-400 text-sm">phone</span>
+                            <span class="text-gray-400">+254 721 156 350</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="material-icons text-blue-400 text-sm">location_on</span>
+                            <span class="text-gray-400">Nairobi, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-sm text-gray-400 mb-4 md:mb-0">
+                        © 2024 SethChenge. All rights reserved.
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="mailto:chengeseth25@gmail.com" class="social-icon bg-blue-600 hover:bg-blue-700 p-2 rounded-full transition-colors">
+                            <span class="material-icons text-white text-sm">email</span>
+                        </a>
+                        <a href="tel:+254721156350" class="social-icon bg-green-600 hover:bg-green-700 p-2 rounded-full transition-colors">
+                            <span class="material-icons text-white text-sm">phone</span>
+                        </a>
+                        <a href="#" class="social-icon bg-blue-500 hover:bg-blue-600 p-2 rounded-full transition-colors">
+                            <span class="material-icons text-white text-sm">business</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success/Error Messages -->
+    <div id="messageContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize map
+        var map = L.map('map').setView([-1.2921, 36.8219], 11);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Add marker for service area
+        var marker = L.marker([-1.2921, 36.8219]).addTo(map);
+        marker.bindPopup("<b>SethChenge IT Services</b><br>Nairobi, Kenya<br>Service Area Coverage").openPopup();
+        
+        // Add service area circle
+        var circle = L.circle([-1.2921, 36.8219], {
+            color: '#3B82F6',
+            fillColor: '#3B82F6',
+            fillOpacity: 0.1,
+            radius: 15000
+        }).addTo(map);
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const closeSidebar = document.querySelector('.close-sidebar');
+        const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+        function openMobileMenu() {
+            mobileSidebar.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileSidebar.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeSidebar.addEventListener('click', closeMobileMenu);
+        sidebarOverlay.addEventListener('click', closeMobileMenu);
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').classList.add('hidden');
+                    }
+                });
+                
+                // Toggle current item
+                if (isActive) {
+                    item.classList.remove('active');
+                    answer.classList.add('hidden');
+                } else {
+                    item.classList.add('active');
+                    answer.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const messageContainer = document.getElementById('messageContainer');
+
+        function showMessage(message, type = 'success') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-4 rounded-lg shadow-lg border-l-4 ${
+                type === 'success' 
+                    ? 'bg-green-50 border-green-400 text-green-700' 
+                    : 'bg-red-50 border-red-400 text-red-700'
+            } max-w-md animate-fade-in-up`;
+            
+            messageDiv.innerHTML = `
+                <div class="flex items-center space-x-2">
+                    <span class="material-icons text-sm">${type === 'success' ? 'check_circle' : 'error'}</span>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            messageContainer.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<span class="material-icons animate-spin">refresh</span><span>Sending...</span>';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message
+                showMessage('Thank you for your message! We\'ll get back to you within 24 hours.', 'success');
+                
+                // Reset button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                
+                // In a real application, you would send the data to your server here
+                console.log('Form submitted:', data);
+            }, 2000);
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate contact cards
+        gsap.fromTo('.contact-card', 
+            { y: 50, opacity: 0 }, 
+            { 
+                y: 0, 
+                opacity: 1, 
+                duration: 0.8, 
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: '.contact-card',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            }
+        );
+
+        // Animate form
+        gsap.fromTo('.contact-form-container', 
+            { x: -50, opacity: 0 }, 
+            { 
+                x: 0, 
+                opacity: 1, 
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.contact-form-container',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            }
+        );
+
+        // Animate FAQ items
+        gsap.fromTo('.faq-item', 
+            { y: 30, opacity: 0 }, 
+            { 
+                y: 0, 
+                opacity: 1, 
+                duration: 0.6, 
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: '.faq-item',
+                    start: 'top 85%',
+                    end: 'bottom 15%',
+                    toggleActions: 'play none none reverse'
+                }
+            }
+        );
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Form validation enhancements
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.classList.add('border-red-300');
+                    this.classList.remove('border-gray-300');
+                } else {
+                    this.classList.remove('border-red-300');
+                    this.classList.add('border-gray-300');
+                }
+            });
+        });
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            if (value.startsWith('254')) {
+                value = value.replace(/^254/, '+254 ');
+            } else if (value.startsWith('0')) {
+                value = value.replace(/^0/, '+254 ');
+            }
+            this.value = value;
+        });
+    </script>
+</body>
+</html>

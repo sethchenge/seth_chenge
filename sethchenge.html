@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SethChenge - Your IT Solutions Partner | Windows Installation & IT Services</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SethChenge provides professional IT services including Windows installation, cybersecurity, AWS cloud solutions, and CISCO networking. Expert IT support for businesses and individuals.">
+    <meta name="keywords" content="IT services, Windows installation, cybersecurity, AWS, CISCO, network setup, computer repair, SethChenge">
+    <meta name="author" content="SethChenge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SethChenge - Your IT Solutions Partner">
+    <meta property="og:description" content="Professional IT services including Windows installation, cybersecurity, and cloud solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sethchenge.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+    
+    <!-- CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="sethchenge.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#sethchenge" class="navbar-brand flex items-center">
+                    <div class="logo-container flex items-center">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                        <span class="brand-text font-bold text-xl">
+                            <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#sethchenge" class="nav-link active flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <span class="material-icons mr-2">home</span>
+                        Home
+                    </a>
+                    <a href="services.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">build</span>
+                        Services
+                    </a>
+                    <a href="staff.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">group</span>
+                        Staff
+                    </a>
+                    <a href="contact.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">contact_mail</span>
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden mobile-menu-btn p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <span class="material-icons text-gray-600">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar fixed inset-0 z-50 lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex h-full">
+            <!-- Sidebar -->
+            <div class="sidebar-content w-80 bg-white shadow-2xl">
+                <div class="sidebar-header p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div class="logo-container flex items-center">
+                            <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                            <span class="brand-text font-bold text-xl">
+                                <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                            </span>
+                        </div>
+                        <button class="close-sidebar p-2 rounded-md hover:bg-gray-100 transition-colors">
+                            <span class="material-icons text-gray-600">close</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-body p-6">
+                    <nav class="space-y-4">
+                        <a href="#sethchenge" class="nav-link active flex items-center p-3 rounded-lg bg-blue-50 text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">home</span>
+                            Home
+                        </a>
+                        <a href="services.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">build</span>
+                            Services
+                        </a>
+                        <a href="staff.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">group</span>
+                            Staff
+                        </a>
+                        <a href="contact.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">contact_mail</span>
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- Overlay -->
+            <div class="sidebar-overlay flex-1 bg-black bg-opacity-50"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="sethchenge" class="hero-section min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="hero-content">
+                    <div class="mb-6">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+                            <span class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in-up">
+                            Professional IT solutions for modern businesses. From Windows installation to cybersecurity, we've got you covered with expert services and 24/7 support.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in-up">
+                        <button class="btn-primary px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                            <span class="material-icons mr-2">rocket_launch</span>
+                            Get Started
+                        </button>
+                        <button class="btn-secondary px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center">
+                            <span class="material-icons mr-2">play_circle</span>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-right">
+                    <div class="relative">
+                        <div class="hero-card bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <span class="material-icons text-white">computer</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">System Status</h3>
+                                    <p class="text-green-600 text-sm">All Systems Online</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Windows Installation</span>
+                                    <span class="text-green-600">✓ Active</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Network Security</span>
+                                    <span class="text-green-600">✓ Protected</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Cloud Services</span>
+                                    <span class="text-green-600">✓ Connected</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon absolute -top-4 -right-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="material-icons text-blue-600">shield</span>
+                            </div>
+                            <div class="floating-icon absolute -bottom-4 -left-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="material-icons text-green-600">cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Card Section -->
+    <section class="ceo-section py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our CEO</h2>
+                <p class="text-lg text-gray-600 mb-12">Leading innovation in IT solutions</p>
+                
+                <div class="ceo-card bg-gradient-to-r from-blue-50 to-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="ceo-image relative">
+                            <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-xl">
+                                SC
+                            </div>
+                            <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <span class="material-icons text-white">verified</span>
+                            </div>
+                        </div>
+                        <div class="ceo-info flex-1 text-center md:text-left">
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Seth Chenge</h3>
+                            <p class="text-blue-600 font-semibold mb-4">Chief Executive Officer & Founder</p>
+                            <p class="text-gray-600 mb-6">
+                                With over 10 years of experience in IT solutions, Seth leads SethChenge with a vision to deliver cutting-edge technology services that empower businesses to thrive in the digital age.
+                            </p>
+                            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                                <span class="badge px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">IT Expert</span>
+                                <span class="badge px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">CISCO Certified</span>
+                                <span class="badge px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">AWS Certified</span>
+                                <span class="badge px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Security Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Certified Excellence</h2>
+                <p class="text-lg text-gray-600">Industry-recognized certifications and partnerships</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="cert-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="material-icons text-white text-2xl">router</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">CISCO Certified</h3>
+                        <p class="text-gray-600 text-sm mb-4">Network Professional</p>
+                        <div class="verified-badge flex items-center justify-center">
+                            <span class="material-icons text-green-600 mr-1">verified</span>
+                            <span class="text-green-600 text-sm">Verified</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="material-icons text-white text-2xl">cloud</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">AWS Certified</h3>
+                        <p class="text-gray-600 text-sm mb-4">Solutions Architect</p>
+                        <div class="verified-badge flex items-center justify-center">
+                            <span class="material-icons text-green-600 mr-1">verified</span>
+                            <span class="text-green-600 text-sm">Verified</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="material-icons text-white text-2xl">security</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">CompTIA Security+</h3>
+                        <p class="text-gray-600 text-sm mb-4">Cybersecurity Expert</p>
+                        <div class="verified-badge flex items-center justify-center">
+                            <span class="material-icons text-green-600 mr-1">verified</span>
+                            <span class="text-green-600 text-sm">Verified</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="material-icons text-white text-2xl">computer</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Microsoft Certified</h3>
+                        <p class="text-gray-600 text-sm mb-4">Azure Administrator</p>
+                        <div class="verified-badge flex items-center justify-center">
+                            <span class="material-icons text-green-600 mr-1">verified</span>
+                            <span class="text-green-600 text-sm">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our IT Services</h2>
+                <p class="text-lg text-gray-600">Comprehensive solutions for all your technology needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-blue-600 text-2xl">computer</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Windows Installation</h3>
+                    <p class="text-gray-600 mb-4">Professional Windows OS installation and setup services for optimal performance and security.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Complete OS Installation
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Driver Updates
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            System Optimization
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-red-600 text-2xl">security</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cybersecurity</h3>
+                    <p class="text-gray-600 mb-4">Advanced security solutions to protect your business from cyber threats and data breaches.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Threat Assessment
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Security Audits
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            24/7 Monitoring
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-orange-600 text-2xl">cloud</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-4">Scalable cloud infrastructure and migration services powered by AWS and Azure.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Cloud Migration
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Infrastructure Setup
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Backup Solutions
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-green-600 text-2xl">router</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Network Setup</h3>
+                    <p class="text-gray-600 mb-4">Professional network configuration and maintenance for reliable connectivity.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Network Design
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            CISCO Equipment
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Performance Optimization
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-purple-600 text-2xl">support</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">IT Support</h3>
+                    <p class="text-gray-600 mb-4">24/7 technical support and maintenance services for uninterrupted operations.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            24/7 Help Desk
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Remote Support
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            System Maintenance
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="service-icon w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <span class="material-icons text-yellow-600 text-2xl">build</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Hardware Repair</h3>
+                    <p class="text-gray-600 mb-4">Expert hardware diagnostics and repair services for all types of computer equipment.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Hardware Diagnostics
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            Component Replacement
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2 text-sm">check_circle</span>
+                            System Upgrades
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl font-bold mb-2 counter" data-target="500">0</div>
+                    <div class="stat-label text-blue-100">Happy Clients</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl font-bold mb-2 counter" data-target="1000">0</div>
+                    <div class="stat-label text-blue-100">Projects Completed</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl font-bold mb-2 counter" data-target="24">0</div>
+                    <div class="stat-label text-blue-100">Hours Support</div>
+                </div>
+                <div class="stat-card text-center">
+                    <div class="stat-number text-4xl font-bold mb-2 counter" data-target="10">0</div>
+                    <div class="stat-label text-blue-100">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <div class="logo-container flex items-center mb-6">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                        <span class="brand-text font-bold text-xl">
+                            <span class="text-blue-400">Seth</span><span class="text-white">Chenge</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6">Your trusted partner for comprehensive IT solutions. We deliver excellence in technology services with certified expertise and 24/7 support.</p>
+                    <div class="social-links flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <span class="material-icons text-white text-sm">facebook</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <span class="material-icons text-white text-sm">alternate_email</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                            <span class="material-icons text-white text-sm">business</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                            <span class="material-icons text-white text-sm">video_library</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#sethchenge" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">home</span>Home
+                        </a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">build</span>Services
+                        </a></li>
+                        <li><a href="staff.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">group</span>Staff
+                        </a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">contact_mail</span>Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">computer</span>Windows Installation
+                        </a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">security</span>Cybersecurity
+                        </a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">cloud</span>Cloud Solutions
+                        </a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">router</span>Network Setup
+                        </a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="material-icons mr-2 text-sm">support</span>IT Support
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="material-icons mr-3 text-blue-400 mt-1">location_on</span>
+                            <div>
+                                <p class="text-gray-300">Nairobi, Kenya</p>
+                                <p class="text-gray-400 text-sm">CBD, Tom Mboya Street</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons mr-3 text-blue-400">phone</span>
+                            <p class="text-gray-300">+254 700 000 000</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons mr-3 text-blue-400">email</span>
+                            <p class="text-gray-300">info@sethchenge.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons mr-3 text-blue-400">access_time</span>
+                            <div>
+                                <p class="text-gray-300">24/7 Support</p>
+                                <p class="text-gray-400 text-sm">Always Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 SethChenge. All rights reserved. | Designed with ❤️ by SethChenge
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 invisible">
+        <span class="material-icons">keyboard_arrow_up</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="sethchenge.js"></script>
+</body>
+</html>

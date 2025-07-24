@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - SethChenge | Meet Our IT Experts</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet the expert team behind SethChenge IT solutions. Our certified professionals provide top-tier Windows installation, cybersecurity, and cloud services.">
+    <meta name="keywords" content="IT team, Seth Chenge CEO, IT experts, cybersecurity specialists, cloud engineers, SethChenge staff">
+    <meta name="author" content="SethChenge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Team - SethChenge IT Solutions">
+    <meta property="og:description" content="Meet the expert team behind SethChenge IT solutions and services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sethchenge.com/staff">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+    
+    <!-- CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="sethchenge.css">
+    <link rel="stylesheet" href="staff.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="navbar-brand flex items-center">
+                    <div class="logo-container flex items-center">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                        <span class="brand-text font-bold text-xl">
+                            <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                        </span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="sethchenge.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">home</span>
+                        Home
+                    </a>
+                    <a href="services.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">build</span>
+                        Services
+                    </a>
+                    <a href="staff.html" class="nav-link active flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <span class="material-icons mr-2">group</span>
+                        Staff
+                    </a>
+                    <a href="contact.html" class="nav-link flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="material-icons mr-2">contact_mail</span>
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden mobile-menu-btn p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <span class="material-icons text-gray-600">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar fixed inset-0 z-50 lg:hidden transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex h-full">
+            <!-- Sidebar -->
+            <div class="sidebar-content w-80 bg-white shadow-2xl">
+                <div class="sidebar-header p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div class="logo-container flex items-center">
+                            <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                            <span class="brand-text font-bold text-xl">
+                                <span class="text-blue-600">Seth</span><span class="text-gray-800">Chenge</span>
+                            </span>
+                        </div>
+                        <button class="close-sidebar p-2 rounded-md hover:bg-gray-100 transition-colors">
+                            <span class="material-icons text-gray-600">close</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-body p-6">
+                    <nav class="space-y-4">
+                        <a href="sethchenge.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">home</span>
+                            Home
+                        </a>
+                        <a href="services.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">build</span>
+                            Services
+                        </a>
+                        <a href="staff.html" class="nav-link active flex items-center p-3 rounded-lg bg-blue-50 text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">group</span>
+                            Staff
+                        </a>
+                        <a href="contact.html" class="nav-link flex items-center p-3 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                            <span class="material-icons mr-3">contact_mail</span>
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- Overlay -->
+            <div class="sidebar-overlay flex-1 bg-black bg-opacity-50"></div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header bg-gradient-to-br from-blue-600 to-blue-800 text-white pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in-up">Meet Our Team</h1>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto fade-in-up delay-200">
+                    The expert professionals behind SethChenge's success in delivering world-class IT solutions
+                </p>
+                <div class="mt-8 flex justify-center fade-in-up delay-300">
+                    <div class="flex items-center space-x-6 text-blue-100">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">3</div>
+                            <div class="text-sm">Team Members</div>
+                        </div>
+                        <div class="w-px h-12 bg-blue-400"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">15+</div>
+                            <div class="text-sm">Years Combined Experience</div>
+                        </div>
+                        <div class="w-px h-12 bg-blue-400"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">500+</div>
+                            <div class="text-sm">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section class="ceo-section py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Founder & CEO</h2>
+                    <p class="text-lg text-gray-600">The visionary leader behind SethChenge's success story</p>
+                </div>
+                
+                <div class="ceo-card github-card bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="flex flex-col lg:flex-row">
+                        <!-- CEO Image Section -->
+                        <div class="lg:w-1/3 bg-gradient-to-br from-blue-50 to-blue-100 p-8 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="ceo-avatar relative mb-6">
+                                    <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-xl mx-auto animate-pulse-slow">
+                                        SC
+                                    </div>
+                                    <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                                        <span class="material-icons text-white">verified</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Seth Chenge</h3>
+                                <p class="text-blue-600 font-semibold mb-4">Chief Executive Officer & Founder</p>
+                                <div class="flex flex-wrap gap-2 justify-center">
+                                    <span class="badge px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">CEO</span>
+                                    <span class="badge px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">CISCO Certified</span>
+                                    <span class="badge px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">AWS Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CEO Story Section -->
+                        <div class="lg:w-2/3 p-8">
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                    <span class="material-icons mr-2 text-blue-600">history</span>
+                                    The SethChenge Story
+                                </h4>
+                                <div class="story-content text-gray-600 space-y-4">
+                                    <p>
+                                        Founded in 2019, SethChenge emerged from Seth's vision to bridge the gap between complex IT solutions and business needs. Starting as a solo entrepreneur with just a laptop and unwavering determination, Seth faced numerous challenges in the competitive IT landscape.
+                                    </p>
+                                    <p>
+                                        The early days were marked by long nights debugging systems, learning new technologies, and building trust with the first clients. The biggest challenge came in 2020 when the pandemic forced rapid digital transformation, but this became SethChenge's breakthrough moment.
+                                    </p>
+                                    <p>
+                                        Today, SethChenge has grown from a one-person operation to a trusted IT solutions provider, having successfully completed over 1000 projects and earned certifications from industry leaders like CISCO, AWS, and Microsoft.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="milestone-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                    <div class="flex items-center mb-2">
+                                        <span class="material-icons text-blue-600 mr-2">rocket_launch</span>
+                                        <h5 class="font-semibold text-gray-800">2019 - The Beginning</h5>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Founded SethChenge with a mission to democratize IT solutions for businesses of all sizes.</p>
+                                </div>
+                                <div class="milestone-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                    <div class="flex items-center mb-2">
+                                        <span class="material-icons text-green-600 mr-2">trending_up</span>
+                                        <h5 class="font-semibold text-gray-800">2020 - Breakthrough</h5>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Pivoted during pandemic to help businesses transition to remote work and cloud solutions.</p>
+                                </div>
+                                <div class="milestone-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                    <div class="flex items-center mb-2">
+                                        <span class="material-icons text-orange-600 mr-2">school</span>
+                                        <h5 class="font-semibold text-gray-800">2021 - Certifications</h5>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Earned multiple industry certifications including CISCO, AWS, and Microsoft Azure.</p>
+                                </div>
+                                <div class="milestone-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                    <div class="flex items-center mb-2">
+                                        <span class="material-icons text-purple-600 mr-2">groups</span>
+                                        <h5 class="font-semibold text-gray-800">2024 - Team Growth</h5>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Expanded team to include specialized experts in cybersecurity and cloud architecture.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info bg-blue-50 p-6 rounded-lg border border-blue-200">
+                                <h5 class="font-semibold text-gray-800 mb-4 flex items-center">
+                                    <span class="material-icons mr-2 text-blue-600">contact_mail</span>
+                                    Get in Touch with Seth
+                                </h5>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex items-center">
+                                        <span class="material-icons text-blue-600 mr-3">phone</span>
+                                        <a href="tel:+254721156350" class="text-blue-600 hover:text-blue-800 transition-colors">+254 721 156 350</a>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="material-icons text-blue-600 mr-3">email</span>
+                                        <a href="mailto:chengeseth25@gmail.com" class="text-blue-600 hover:text-blue-800 transition-colors">chengeseth25@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="team-section py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Expert Team</h2>
+                <p class="text-lg text-gray-600">Meet the skilled professionals who make SethChenge's success possible</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="team-member-card github-card bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="member-avatar relative mb-4">
+                                <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto">
+                                    AK
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-white text-sm">verified</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Alex Kimani</h3>
+                            <p class="text-green-600 font-semibold mb-4">Senior Cybersecurity Specialist</p>
+                            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                                <span class="badge px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Security+</span>
+                                <span class="badge px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Ethical Hacker</span>
+                                <span class="badge px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">CISSP</span>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <p class="text-gray-600 mb-4">
+                                Alex brings 5+ years of cybersecurity expertise to SethChenge, specializing in threat assessment, penetration testing, and security architecture. He's passionate about protecting businesses from evolving cyber threats.
+                            </p>
+                            
+                            <div class="skills mb-4">
+                                <h5 class="font-semibold text-gray-800 mb-2">Specializations:</h5>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-green-600 mr-2 text-sm">security</span>
+                                        Network Security & Firewall Management
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-green-600 mr-2 text-sm">bug_report</span>
+                                        Vulnerability Assessment & Penetration Testing
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-green-600 mr-2 text-sm">shield</span>
+                                        Incident Response & Digital Forensics
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievements bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h6 class="font-semibold text-gray-800 mb-2 flex items-center">
+                                    <span class="material-icons text-green-600 mr-2 text-sm">emoji_events</span>
+                                    Key Achievements
+                                </h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Secured 200+ enterprise networks</li>
+                                    <li>• Reduced security incidents by 90%</li>
+                                    <li>• Certified Ethical Hacker (CEH)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member-card github-card bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="member-avatar relative mb-4">
+                                <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg mx-auto">
+                                    MN
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center">
+                                    <span class="material-icons text-white text-sm">verified</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Maria Njoroge</h3>
+                            <p class="text-orange-600 font-semibold mb-4">Cloud Solutions Architect</p>
+                            <div class="flex flex-wrap gap-2 justify-center mb-4">
+                                <span class="badge px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">AWS Certified</span>
+                                <span class="badge px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Azure Expert</span>
+                                <span class="badge px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">DevOps</span>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <p class="text-gray-600 mb-4">
+                                Maria is our cloud infrastructure expert with 6+ years of experience in designing scalable cloud solutions. She leads our cloud migration projects and ensures optimal performance and cost-efficiency.
+                            </p>
+                            
+                            <div class="skills mb-4">
+                                <h5 class="font-semibold text-gray-800 mb-2">Specializations:</h5>
+                                <ul class="space-y-1 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-orange-600 mr-2 text-sm">cloud</span>
+                                        AWS & Azure Cloud Architecture
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-orange-600 mr-2 text-sm">sync</span>
+                                        DevOps & CI/CD Pipeline Implementation
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="material-icons text-orange-600 mr-2 text-sm">storage</span>
+                                        Database Management & Optimization
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievements bg-orange-50 p-4 rounded-lg border border-orange-200">
+                                <h6 class="font-semibold text-gray-800 mb-2 flex items-center">
+                                    <span class="material-icons text-orange-600 mr-2 text-sm">emoji_events</span>
+                                    Key Achievements
+                                </h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Migrated 150+ systems to cloud</li>
+                                    <li>• Reduced infrastructure costs by 40%</li>
+                                    <li>• AWS Solutions Architect Professional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Values Section -->
+    <section class="values-section py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Core Values</h2>
+                <p class="text-lg text-gray-600">The principles that guide everything we do at SethChenge</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="value-card github-card bg-white rounded-xl shadow-lg border border-gray-200 p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <div class="value-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-blue-600 text-2xl">engineering</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Technical Excellence</h3>
+                    <p class="text-gray-600">We strive for the highest standards in every project, utilizing cutting-edge technologies and best practices.</p>
+                </div>
+                
+                <div class="value-card github-card bg-white rounded-xl shadow-lg border border-gray-200 p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <div class="value-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-green-600 text-2xl">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Client Partnership</h3>
+                    <p class="text-gray-600">We build lasting relationships with our clients, understanding their unique needs and delivering tailored solutions.</p>
+                </div>
+                
+                <div class="value-card github-card bg-white rounded-xl shadow-lg border border-gray-200 p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <div class="value-icon w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-icons text-orange-600 text-2xl">trending_up</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Continuous Growth</h3>
+                    <p class="text-gray-600">We're committed to continuous learning and improvement, staying ahead of industry trends and technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <div class="logo-container flex items-center mb-6">
+                        <img src="images/logo.png" alt="SethChenge Logo" class="logo-img w-10 h-10 mr-3">
+                        <span class="brand-text font-bold text-xl">
+                            <span class="text-blue-400">Seth</span><span class="text-white">Chenge</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-300 mb-6">Your trusted partner for comprehensive IT solutions. We deliver excellence in technology services with certified expertise and 24/7 support.</p>
+                    <div class="social-links flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <span class="material-icons text-white text-sm">facebook</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <span class="material-icons text-white text-sm">alternate_email</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                            <span class="material-icons text-white text-sm">business</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                            <span class="material-icons text-white text-sm">video_library</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg<div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="sethchenge.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="staff.html" class="text-gray-300 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Windows Installation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">IT Consulting</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Network Setup</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="material-icons text-blue-400 mr-3">phone</span>
+                            <a href="tel:+254721156350" class="text-gray-300 hover:text-white transition-colors">+254 721 156 350</a>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons text-blue-400 mr-3">email</span>
+                            <a href="mailto:chengeseth25@gmail.com" class="text-gray-300 hover:text-white transition-colors">chengeseth25@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons text-blue-400 mr-3">location_on</span>
+                            <span class="text-gray-300">Nairobi, Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-icons text-blue-400 mr-3">schedule</span>
+                            <span class="text-gray-300">24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm mb-4 md:mb-0">
+                        © 2024 SethChenge. All rights reserved. Built with passion for technology excellence.
+                    </p>
+                    <div class="flex items-center space-x-4 text-sm text-gray-300">
+                        <span class="flex items-center">
+                            <span class="material-icons text-green-400 mr-1 text-sm">verified</span>
+                            Certified IT Professionals
+                        </span>
+                        <span class="flex items-center">
+                            <span class="material-icons text-blue-400 mr-1 text-sm">security</span>
+                            Secure & Reliable
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileSidebar = document.querySelector('.mobile-sidebar');
+        const closeSidebar = document.querySelector('.close-sidebar');
+        const sidebarOverlay = document.querySelector('.sidebar-overlay');
+        
+        function openMobileMenu() {
+            mobileSidebar.classList.remove('-translate-x-full');
+            document.body.classList.add('overflow-hidden');
+        }
+        
+        function closeMobileMenu() {
+            mobileSidebar.classList.add('-translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+        
+        if (closeSidebar) {
+            closeSidebar.addEventListener('click', closeMobileMenu);
+        }
+        
+        if (sidebarOverlay) {
+            sidebarOverlay.addEventListener('click', closeMobileMenu);
+        }
+        
+        // Close mobile menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Fade in animations
+        gsap.utils.toArray('.fade-in-up').forEach((element, index) => {
+            gsap.fromTo(element, 
+                { opacity: 0, y: 50 }, 
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.8,
+                    delay: index * 0.1,
+                    ease: "power2.out"
+                }
+            );
+        });
+        
+        // Team member cards animation
+        gsap.utils.toArray('.team-member-card').forEach((card, index) => {
+            gsap.fromTo(card,
+                { opacity: 0, y: 50, scale: 0.9 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+        
+        // Value cards animation
+        gsap.utils.toArray('.value-card').forEach((card, index) => {
+            gsap.fromTo(card,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+        
+        // CEO card animation
+        gsap.fromTo('.ceo-card',
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.ceo-card',
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+        
+        // Milestone cards stagger animation
+        gsap.utils.toArray('.milestone-card').forEach((card, index) => {
+            gsap.fromTo(card,
+                { opacity: 0, x: -30 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Add hover effects to badges
+        document.querySelectorAll('.badge').forEach(badge => {
+            badge.addEventListener('mouseenter', () => {
+                gsap.to(badge, { scale: 1.1, duration: 0.2 });
+            });
+            badge.addEventListener('mouseleave', () => {
+                gsap.to(badge, { scale: 1, duration: 0.2 });
+            });
+        });
+    </script>
+</body>
+</html>
